@@ -10,6 +10,7 @@ $(function() {
     var oldState = $(this).data("eaten"); // get the eaten state of the item tied to this button
     var newState;
 
+    // toggle the state of the item
     if(oldState == 1){
       newState = 0;
     }
@@ -17,11 +18,12 @@ $(function() {
       newState = 1;
     }
 
+    // create an object with the new key-value pair(s)
     var newAttr = {
       devoured: newState
     };
 
-    // Send the PUT request.
+    // Send the PUT request
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newAttr

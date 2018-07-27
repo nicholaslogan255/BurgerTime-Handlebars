@@ -1,6 +1,15 @@
 // Import MySQL connection.
 var connection = require("./connection");
 
+
+// ===========================================================================
+//  Our ORM (Object-relational Mapping) File
+//  creates a number of functions in order help us define the database queries
+
+//
+// ===========================================================================
+
+
 // Helper function for SQL syntax
 function printQuestionMarks(num) {
   var arr = [];
