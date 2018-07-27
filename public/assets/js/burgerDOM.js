@@ -3,6 +3,9 @@ $(function() {
 
   // when a button with this class is clicked, change the eaten state of the corresponding item
   $(".change-eaten").on("click", function(event) {
+
+    console.log("Pressed Update burger eaten/devoured Button");
+
     var id = $(this).data("id"); // get the id of the item tied to this button
     var oldState = $(this).data("eaten"); // get the eaten state of the item tied to this button
     var newState;
@@ -24,7 +27,7 @@ $(function() {
       data: newAttr
     }).then(
       function() {
-        console.log("Changed consumed to", newEaten);
+        console.log("Changed consumed state");
         // Reload the page to get the updated list
         location.reload();
       }
